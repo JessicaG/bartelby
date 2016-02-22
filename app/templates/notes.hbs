@@ -1,22 +1,5 @@
 <div class="row">
-​
-  <div class="col-md-4">
-    <div class="list-group">
-      {{#each model as |note|}}
-      {{#link-to 'notes.note' note class="list-group-item"}}
-        <h4 class="list-group-item-heading">{{note.id}}</h4>
-      {{/link-to}}
-      {{/each}}
-    </div>
-  </div>
-
-  <div class="col-md-8">
-    {{outlet}}
-  </div>
-​
-</div>
-
-  <div class="row">
+  <div class="col-md-12">
     <form>
     <div class="form-group">
       <label for='title'>Title</label>
@@ -26,7 +9,24 @@
       <label for='content'>Content</label>
       {{input value=newNoteContent id="content id" class="form-control"}}
     </div>
-      <button class="btn btn-default btn-primary" {{action "createNote"}} type="submit">Create</button>
+      <button class="btn btn-default btn-default" {{action "createNote"}} type="submit">Create</button>
     </form>
   </div>
-  
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4">
+    <div class="list-group">
+      {{#each model as |note|}}
+      {{#link-to 'notes.note' note class="list-group-item"}}
+        <h4 class="list-group-item-heading">{{note.id}}</h4>
+      {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="col-md-8">
+    {{outlet}}
+  </div>
+​
+</div>
+
