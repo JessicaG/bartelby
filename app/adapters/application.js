@@ -15,9 +15,9 @@ export default DS.Adapter.extend({
     return filesystem.all();
   },
 
-  createRecord(){
-  	debugger;
-  	return filesystem.write();
+  createRecord(store, type, record){
+  	let data = this.serialize(record, {includeId: true});
+  	return filesystem.write(data.id, data.content);
    }
 
 });
