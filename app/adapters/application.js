@@ -1,4 +1,4 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 import DS from 'ember-data';
 
 // let fakeData = [
@@ -14,5 +14,9 @@ export default DS.Adapter.extend({
   findAll() {
     return filesystem.all();
   }
+
+  // create(){
+  	
+  // }
 
 });

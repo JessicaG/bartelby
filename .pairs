@@ -1,0 +1,10 @@
+# .pairs - configuration for 'git pair'
+pairs:
+  # <initials>: <Firstname> <Lastname>[; <email-id>]
+  jg: Jessica Goulding; jessicag
+  jd: Jill Donohue; jillmd501
+email:
+  prefix: pair
+  domain: pivotallabs.com
+  no_solo_prefix: true
+global: false  # Set to true for git-pair to change git configuration for all your projects

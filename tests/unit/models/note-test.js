@@ -6,7 +6,6 @@ moduleForModel('note', 'Unit | Model | note', {
 });
 
 test('it exists', function(assert) {
-  let model = this.subject();
-  // let store = this.store();
-  assert.ok(!!model);
+  let route = this.subject();
+  assert.ok(route);
 });
