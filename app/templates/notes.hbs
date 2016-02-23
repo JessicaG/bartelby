@@ -18,9 +18,7 @@
   <div class="col-md-4">
     <div class="list-group">
       {{#each model as |note|}}
-      {{#link-to 'notes.note' note class="list-group-item"}}
-        <h4 class="list-group-item-heading">{{note.id}}</h4>
-      {{/link-to}}
+        {{note-list-item note=note}}
       {{/each}}
     </div>
   </div>
@@ -29,4 +27,3 @@
   </div>
 ​
 </div>
-

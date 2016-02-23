@@ -1,22 +1,16 @@
-
 <div class='note-title-content'>
-  <h1>{{ember-inline-edit
-    value=model.id
-    field='text'}}
+  <h1>{{model.id}}
   </h1>
 
-    {{#if model.hasDirtyAttributes}}
-      {{action 'changeValue' onEvent='keypress'}}
-    {{/if}}
+  {{#if model.hasDirtyAttributes}}
+    <p>(Not saved.)</p>
+  {{/if}}
 </div>
 
 
 <div class="note-body-content">
-  {{ember-inline-edit
-    value=model.content
-    field='textarea'}}
-
+  {{textarea value=model.content class="note-body-content-textarea"}}
   {{#if model.hasDirtyAttributes}}
-    {{action 'changeValue' onEvent='submit'}}
+    <button {{action 'saveNote'}}>Save</button>
   {{/if}}
 </div>
