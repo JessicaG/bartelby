@@ -17,6 +17,6 @@
     field='textarea'}}
 
   {{#if model.hasDirtyAttributes}}
-    <button {{action 'saveNote' on='click'}}>Save Note</button>
+    {{action 'changeValue' onEvent='submit'}}
   {{/if}}
 </div>
