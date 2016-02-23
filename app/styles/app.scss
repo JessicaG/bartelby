@@ -2,7 +2,7 @@ body {
 	background: #9999FF;
 	font-family: 'Poiret One';
 	color: white;
-	background: #d3d3d3; 
+	background: #d3d3d3;
 }
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
@@ -13,4 +13,12 @@ body {
 h2 {
 	font-family: 'Poiret One', cursive;
 	text-align: center;
+}
+
+.note-body-content {
+	color: black;
+}
+
+.note-title-content {
+	color: black;
 }
