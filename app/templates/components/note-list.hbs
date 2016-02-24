@@ -1,1 +1,5 @@
-{{yield}}
+{{input type="text" value=searchTerm placeholder="Find a Note!"}}
+
+{{#each availableNotes as |note|}}
+  {{note-list-item note=note}}
+{{/each}}

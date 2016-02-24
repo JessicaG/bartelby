@@ -18,10 +18,11 @@
   <div class="col-md-4">
     <div class="list-group">
       {{#each model as |note|}}
-        {{note-list-item note=note}}
+        {{note-list-index note=note}}
       {{/each}}
     </div>
   </div>
+    {{note-list notes=model}}
   <div class="col-md-8">
     {{outlet}}
   </div>
