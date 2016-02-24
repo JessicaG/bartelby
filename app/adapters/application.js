@@ -25,6 +25,13 @@ export default DS.Adapter.extend({
     return filesystem.write(data.id, data.content);
   },
 
-  
+  deleteRecord(store, type, record) {
+  return new RSVP.Promise((resolve, reject) => {
+    filesystem.unlink(path.join(this.base, fileName), (error) => {
+      if (error) { return reject(error); }
+      resolve(true);
+    });
+  });
+}
 
 });
