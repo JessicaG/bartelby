@@ -26,12 +26,8 @@ export default DS.Adapter.extend({
   },
 
   deleteRecord(store, type, record) {
-  return new RSVP.Promise((resolve, reject) => {
-    filesystem.unlink(path.join(this.base, fileName), (error) => {
-      if (error) { return reject(error); }
-      resolve(true);
-    });
-  });
-}
+    let data = this.serialize(record, { includeId: true});
+    return filesystem.destroy(data.id).then(() => { return { id: data.id } })
+  }
 
 });

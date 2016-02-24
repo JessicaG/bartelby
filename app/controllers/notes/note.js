@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
       this.get('model').save();
     },
     deleteNote() {
-      this.get('model').destroy();
+      this.get('model').deleteRecord();
     }
   }
 });
