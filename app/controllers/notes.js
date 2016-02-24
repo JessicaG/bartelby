@@ -13,5 +13,5 @@ export default Ember.Controller.extend({
 				this.set('newNoteContent', null);
 			});
 		}
-  	}
+  }
 });
