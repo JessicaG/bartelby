@@ -1,5 +1,13 @@
-{{input type="text" value=searchTerm placeholder="Find a Note!"}}
+<div class="col-lg-6">
+  <div class="input-group">
+    <span class="glyphicon glyphicon-search input-group-addon"></span>{{input type="text" class="form-control" value=searchTerm placeholder="Search for a note..."}}
+  </div>
+</div>
 
-{{#each availableNotes as |note|}}
-  {{note-list-item note=note}}
-{{/each}}
+<div class="col-md-4">
+  <div class="list-group">
+    {{#each availableNotes as |note|}}
+      {{note-list-item note=note}}
+    {{/each}}
+  </div>
+</div>
