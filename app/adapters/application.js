@@ -23,6 +23,8 @@ export default DS.Adapter.extend({
   updateRecord(store, type, record) {
     let data = this.serialize(record, { includeId: true});
     return filesystem.write(data.id, data.content);
-  }
+  },
+
+  
 
 });
