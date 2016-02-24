@@ -13,6 +13,9 @@
 <div class="note-body-content">
   {{textarea value=model.content class="note-body-content-textarea"}}
   {{#if model.hasDirtyAttributes}}
+  <br>
     <button {{action 'saveNote'}}>Save</button>
   {{/if}}
+  <br>
+  <button {{action 'deleteNote'}}>Delete</button>
 </div>
