@@ -29,9 +29,9 @@ app.on('ready', function onReady() {
 
   appIcon = new Tray('./app/assets/alphabet-letter-j.jpg');
   var contextMenu = Menu.buildFromTemplate([
-    { label: 'Item1', type: 'radio' },
-    { label: 'Item2', type: 'radio' },
-    { label: 'Item3', type: 'radio', checked: true },
+    { label: 'HAY STEVE', type: 'radio' },
+    { label: 'How cool is this?', type: 'radio' },
+    { label: 'I am still trying to make it work', type: 'radio' },
   ]);
 
   appIcon.setToolTip('This is my application.');
