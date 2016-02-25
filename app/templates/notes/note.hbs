@@ -6,13 +6,22 @@
     <p>(Not saved.)</p>
   {{/if}}
 </div>
+  <div class="col-md-6">
+	<div class="note-body-content">
+	  <div class="form-group">
+        {{textarea value=model.content class="form-control rows="6"}}
+      </div>
+   </div>
+   </div>
 
-{{note-counter note=model}}
-{{html-renderer note=model}}
-
-<div class="note-body-content">
-  {{textarea value=model.content class="note-body-content-textarea"}}
+  <div class="col-md-6">
+  	{{note-counter note=model}}
+  </div>
+  <div class="col-md-6">
+  	{{html-renderer note=model}}
+  </div>
   {{#if model.hasDirtyAttributes}}
     <button {{action 'saveNote'}}>Save</button>
   {{/if}}
+  </div>
 </div>

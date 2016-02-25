@@ -1,5 +1,26 @@
 <div class="row">
-  <div class="col-md-12">
+
+  <div class="col-md-6">
+    {{note-list notes=model}}
+  </div>
+
+
+  <div class="col-md-6">
+      {{#each model as |note|}}
+        {{note-list-index note=note}}
+      {{/each}}
+    </div>
+    <div class="col-md-6">
+      {{outlet}}
+    </div>
+​  </div>
+<!-- </div> -->
+
+<!-- <div class="row"> -->
+
+  <!-- <div class="col-md-6"> -->
+  <!-- {{note-search notes=model}} -->
+  <!-- </div> -->
     <form>
     <div class="form-group">
       <label for='title'>Title</label>
@@ -12,19 +33,5 @@
       <button class="btn btn-default btn-default" {{action "createNote"}} type="submit">Create</button>
     </form>
   </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-md-4">
-    <div class="list-group">
-      {{#each model as |note|}}
-        {{note-list-index note=note}}
-      {{/each}}
-    </div>
-  </div>
-    {{note-list notes=model}}
-  <div class="col-md-8">
-    {{outlet}}
-  </div>
-​
+
 </div>
